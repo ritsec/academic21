@@ -8,9 +8,10 @@ Open your browser and head to http://<TARGET_IP>:8080
 - Open 'VMWare Workstation Pro'
 - Click on 'Kali Linux 2021' on the left side list of VMs
 - Right click again on 'Kali Linux 2021' and click 'Settings'. 
+![settings](settings.PNG)
     - Select 'Network Adapter' and change it to 'Bridged'
+    ![bridge](bridge.PNG)
 - Click the Black Box with the "$_" to open the terminal.
-
 ![terminal](terminal.PNG)
 
 ## Attacking the Box - Commands To Run
@@ -59,35 +60,21 @@ Attack the box!
 
 ![exploit](exploit.PNG)
 
-With the meterpreter prompt, enter `shell` to spawn a bash prompt on the box.
-
-8. `shell`
-
-![shell](shell.PNG)
-
 ## Modifying the Website
 
-With your shell, now you can modify the website. Run the pwd command to see your path (location) on the remote box.
+With your meterpreter shell, now you can modify the website. 
 
-1. `pwd`
+Most websites by default keep their files in `/var/www`. In our case, the `index.html` file contains the main page of the website. 
 
-![pwd](whoamiandpwd.PNG)
+Use the `edit /var/www/index.html` command to edit the file. Add your name to the website!
 
-Most websites by default keep their files in `/var/www`. Change to this directory and list the contents.
+![edit](edit.PNG)
 
-2. `cd /var/www`
-3. `ls`
 
-![cdandls](cdandls.PNG)
+- Once you are in the text editor, press the 'i' key to go into insert mode.
+- Use the arrow keys to move down to the < li > section
+- Once you add your name, hit the 'ESC' key, type ':wq' and hit 'Enter'
 
-The `index.html` file contains the main page of the website. Add your name to it below. 
+![nameadd](nameadd.PNG)
 
-The `echo` command will write what you give it into the file given. MAKE SURE TO USE TWO (2) '>' keys!
-
-4. `echo 'your_name_here' >> index.html`
-
-![echo](addyourname.PNG)
-
-Now visit the website and see that your name has been publicly added!
-
-Now it's your turn, find out how to add a page of your own to the site. (Hint: use the `touch` command)
+Now visit the website in your browser and see your name publicly hosted on the target site!!
