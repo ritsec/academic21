@@ -9,6 +9,7 @@ Open your browser and head to http://<TARGET_IP>:8080
 
 ## Setup
 Click the Black Box with the "$_" to open the terminal.
+
 ![terminal](terminal.PNG)
 
 ## Attacking the Box - Commands To Run
