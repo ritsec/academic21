@@ -4,9 +4,13 @@
 - Open 'VMWare Workstation Pro'
 - Click on 'Kali Linux 2021' on the left side list of VMs
 - Right click again on 'Kali Linux 2021' and click 'Settings'. 
+
 ![settings](settings.PNG)
+
     - Select 'Network Adapter' and change it to 'Bridged'
-    ![bridge](bridge.PNG)
+
+![bridge](bridge.PNG)
+
 - Hit the Play Button to start the VM.
     - Username: kali
     - Password: kali
@@ -17,9 +21,11 @@
 
 ## Attacking the Box - Commands To Run
 - Click the Black Box with the "$_" to open the terminal.
+
 ![terminal](terminal.PNG)
 
 This will open the Metasploit Console.
+
 1. `msfconsole`
 
 ![landing](landing.PNG)
