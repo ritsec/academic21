@@ -1,14 +1,15 @@
 # RITSEC Academic Day - ShellShock 
 
-## Background
-What is metasploit, what is shellshock, etc.C  
-
 ## Viewing the Website
 
 Open your browser and head to http://<TARGET_IP>:8080
 
 ## Setup
-Click the Black Box with the "$_" to open the terminal.
+- Open 'VMWare Workstation Pro'
+- Click on 'Kali Linux 2021' on the left side list of VMs
+- Right click again on 'Kali Linux 2021' and click 'Settings'. 
+    - Select 'Network Adapter' and change it to 'Bridged'
+- Click the Black Box with the "$_" to open the terminal.
 
 ![terminal](terminal.PNG)
 
