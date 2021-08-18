@@ -5,7 +5,7 @@
 - Click on 'Kali Linux 2021' on the left side list of VMs
 - Right click again on 'Kali Linux 2021' and click 'Settings'. 
     - Select 'Network Adapter' and change it to 'Bridged'
-- Hit the Green Play Button to start the VM.
+- Hit the Play Button to start the VM.
     - Username: kali
     - Password: kali
 
