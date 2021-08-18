@@ -1,19 +1,23 @@
 # RITSEC Academic Day - ShellShock 
 
-## Viewing the Website
-
-Open your browser and head to http://<TARGET_IP>:8080
-
 ## Setup
 - Open 'VMWare Workstation Pro'
 - Click on 'Kali Linux 2021' on the left side list of VMs
 - Right click again on 'Kali Linux 2021' and click 'Settings'. 
     - Select 'Network Adapter' and change it to 'Bridged'
+- Hit the Green Play Button to start the VM.
+    - Username: kali
+    - Password: kali
+
+## Viewing the Website
+- Click the top left logo to search for firefox.
+- Open your browser and head to http://<TARGET_IP>:8080
+
+## Attacking the Box - Commands To Run
 - Click the Black Box with the "$_" to open the terminal.
 
 ![terminal](terminal.PNG)
 
-## Attacking the Box - Commands To Run
 This will open the Metasploit Console.
 1. `msfconsole`
 
